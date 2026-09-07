@@ -1,0 +1,33 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html lang="en-US">
+  <head>
+    <title>6.101: Spreadsheet</title>
+    <link rel="stylesheet" href="spreadsheet.css" />
+  </head>
+
+  <body>
+    <center>
+      <p id="loadstatus" style="display: none"></p>
+      <table border="1" id="filetable">
+        <tr>
+          <td colspan="1">Download:</td>
+          <td colspan="2">
+            <button onclick="downloadsheet()">Download Current Sheet</button
+            ><a style="opacity: 0" download="sheet.json" id="downloadlink"></a>
+          </td>
+        </tr>
+        <tr>
+          <td>Upload:</td>
+          <td><input id="fileupload" type="file" /></td>
+          <td><button onclick="loadfromfile()">Load From File</button></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <table border="1" id="spreadsheet"></table>
+    </center>
+
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.27.5/full/pyodide.js"></script>
+    <script src="spreadsheet.js"></script>
+  </body>
+</html>
